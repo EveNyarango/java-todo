@@ -2,6 +2,8 @@ package models;
 
 import java.util.Objects;
 
+import static java.util.Currency.instances;
+
 public class Category {
 
     private String name;
@@ -38,6 +40,14 @@ public class Category {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(name, id);
     }
-}
+//    public static Category find(int id) {
+//        try {
+//            return instances.get(id - 1);
+//        } catch (IndexOutOfBoundsException exception) {
+//            return null;
+//        }
+//    }
+    }
